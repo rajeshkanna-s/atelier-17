@@ -1,15 +1,15 @@
-import React, { useEffect, useRef, useState, useCallback } from 'react';
+﻿import React, { useEffect, useRef, useState, useCallback } from 'react';
 import { createRoot } from 'react-dom/client';
 import './styles.css';
 
 const videos = [
   {
-    file: '/media/watch.mp4',
+    file: `${import.meta.env.BASE_URL}media/watch.mp4`,
     label: '01 / Calibre 04',
     title: 'A watchmaker’s hands, framed like choreography'
   },
   {
-    file: '/media/perfume.mp4',
+    file: `${import.meta.env.BASE_URL}media/perfume.mp4`,
     label: '02 / Citrus study',
     title: 'A scent architecture built around lemon peel'
   }
@@ -289,7 +289,7 @@ function App() {
                   muted
                   loop
                   playsInline
-                  poster="/images/poster.svg"
+                  poster={`${import.meta.env.BASE_URL}images/poster.svg`}
                 />
                 <div className="media-overlay">
                   <span>View in Hero Full View 0{i + 1}</span>
